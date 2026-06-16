@@ -3,31 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estathmer Sah — Acumen Holding × SDN Media</title>
+    <title>El Borsa w El Forsa — Acumen Holding × SDN Media</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Spline+Sans:wght@300;400;500;600;700&family=Archivo:wght@800&family=Cairo:wght@700;800&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg-primary: #FAF9F6;
-            --bg-alt: #F0EDE5;
-            --bg-card: #FFFFFF;
-            --gold: #B08D19;
-            --gold-light: #967814;
-            --gold-dim: rgba(176, 141, 25, 0.07);
-            --gold-warm: #F6F1E3;
-            --border: rgba(26, 25, 23, 0.07);
-            --border-hover: rgba(176, 141, 25, 0.3);
-            --text-primary: #1A1917;
-            --text-secondary: #47443D;
-            --text-muted: #8A8580;
-            --text-faint: #B5B0A8;
-            --bar-bg: #E8E4DC;
-            --shadow-sm: 0 1px 2px rgba(26,25,23,0.04), 0 4px 12px rgba(26,25,23,0.03);
-            --shadow-md: 0 4px 12px rgba(26,25,23,0.06), 0 16px 40px rgba(26,25,23,0.05);
-            --shadow-lg: 0 8px 30px rgba(26,25,23,0.08), 0 24px 60px rgba(26,25,23,0.06);
+            /* ===== El Borsa w El Forsa — inherited brand palette ===== */
+            --forest: #323a29; --forest-deep: #232a1c; --forest-night: #1a2014;
+            --olive: #454829; --sage: #87895c; --sage-soft: #a2a185; --pine: #293a2d;
+            --paper: #f4ecdf; --paper-hi: #fffaf6; --sand: #d0c3b0;
+            --walnut: #492e1d; --walnut-soft: #7f6b5d;
+            --gold: #d8b061; --terracotta: #be6e53; --rust: #914032;
+            --ink: #21271a; --line: rgba(73,46,29,.18);
+            /* semantic aliases mapped onto brand tokens */
+            --bg-primary: #fffaf6;
+            --bg-alt: #f4ecdf;
+            --bg-card: #fffaf6;
+            --gold-light: #c2954a;
+            --gold-bright: #d8b061;
+            --gold-dim: rgba(216,176,97,0.12);
+            --gold-warm: #f6efdd;
+            --border: rgba(73,46,29,.16);
+            --border-hover: rgba(216,176,97,.42);
+            --text-primary: #232a1c;
+            --text-secondary: #492e1d;
+            --text-muted: #7f6b5d;
+            --text-faint: #a99e86;
+            --bar-bg: #e7dcc6;
+            --shadow-sm: 0 1px 2px rgba(42,28,18,.05), 0 4px 14px rgba(42,28,18,.05);
+            --shadow-md: 0 14px 34px -22px rgba(42,28,18,.5);
+            --shadow-lg: 0 26px 50px -26px rgba(42,28,18,.55);
             --section-pad: clamp(100px, 12vw, 160px);
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -36,7 +44,7 @@
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Spline Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.65;
@@ -58,12 +66,12 @@
         /* ── BOTTOM SLIDER NAV ── */
         .slider-nav {
             position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
-            background: rgba(250, 249, 246, 0.85);
+            background: rgba(251, 247, 238, 0.86);
             backdrop-filter: blur(30px) saturate(1.4);
             -webkit-backdrop-filter: blur(30px) saturate(1.4);
-            border-top: 1px solid rgba(26,25,23,0.05);
+            border-top: 1px solid rgba(43,58,46,0.05);
             padding-bottom: env(safe-area-inset-bottom, 0px);
-            box-shadow: 0 -4px 30px rgba(26,25,23,0.06);
+            box-shadow: 0 -4px 30px rgba(43,58,46,0.06);
         }
         .slider-progress {
             height: 2px; background: var(--bar-bg);
@@ -113,7 +121,7 @@
             min-height: 40px;
         }
         .slider-section-name {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 16px; font-weight: 400;
             color: var(--text-primary);
             transition: opacity 0.4s, transform 0.4s var(--ease-out-expo);
@@ -140,7 +148,7 @@
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
         }
-        .slider-dot:hover { background: rgba(176,141,25,0.35); }
+        .slider-dot:hover { background: rgba(181,134,42,0.35); }
         .slider-dot.active {
             background: var(--gold);
             width: 22px; border-radius: 3px;
@@ -167,7 +175,7 @@
             position: absolute;
             width: 600px; height: 600px;
             border-radius: 50%;
-            border: 1px solid rgba(176,141,25,0.06);
+            border: 1px solid rgba(181,134,42,0.06);
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             pointer-events: none;
@@ -175,8 +183,8 @@
         .hero-content { position: relative; max-width: 860px; }
         .hero-badge {
             display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(176,141,25,0.06);
-            border: 1px solid rgba(176,141,25,0.15);
+            background: rgba(181,134,42,0.06);
+            border: 1px solid rgba(181,134,42,0.15);
             padding: 10px 24px; border-radius: 100px;
             font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
             text-transform: uppercase; color: var(--gold);
@@ -197,7 +205,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .hero h1 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: clamp(52px, 8vw, 100px);
             font-weight: 400; line-height: 1.0;
             margin-bottom: 28px; color: var(--text-primary);
@@ -223,7 +231,7 @@
             animation: heroReveal 0.8s var(--ease-out-expo) 1s forwards;
         }
         .hero-stat-val {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 48px; font-weight: 400; color: var(--gold);
             line-height: 1;
         }
@@ -249,7 +257,7 @@
             opacity: 0.5;
         }
         .section-title {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: clamp(34px, 4.5vw, 56px);
             font-weight: 400; line-height: 1.12;
             margin-bottom: 24px; color: var(--text-primary);
@@ -283,7 +291,7 @@
         .partner-card::before {
             content: '';
             position: absolute; top: 0; left: 0; width: 0; height: 2px;
-            background: linear-gradient(90deg, var(--gold), rgba(176,141,25,0.2));
+            background: linear-gradient(90deg, var(--gold), rgba(181,134,42,0.2));
             transition: width 0.6s var(--ease-out-expo);
         }
         .partner-card:hover::before { width: 100%; }
@@ -294,7 +302,7 @@
         }
         .partner-card:hover .partner-logo { opacity: 1; }
         .partner-card h3 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 24px; font-weight: 400; margin-bottom: 6px;
         }
         .partner-card .role {
@@ -326,7 +334,7 @@
         .powered-by-img {
             width: 34px; height: 34px;
             border-radius: 50%; object-fit: cover;
-            border: 2px solid rgba(176,141,25,0.2);
+            border: 2px solid rgba(181,134,42,0.2);
             transition: border-color 0.3s;
         }
         .partner-card:hover .powered-by-img { border-color: var(--gold); }
@@ -370,7 +378,7 @@
             transform: translateY(-3px);
         }
         .metric-val {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 38px; font-weight: 400; color: var(--gold);
             line-height: 1; margin-bottom: 10px;
         }
@@ -393,13 +401,13 @@
         .team-img-wrap {
             width: 130px; height: 130px; margin: 0 auto 18px;
             border-radius: 50%; overflow: hidden;
-            border: 2px solid rgba(176,141,25,0.15);
+            border: 2px solid rgba(181,134,42,0.15);
             transition: all 0.5s var(--ease-out-expo);
             position: relative;
         }
         .team-card:hover .team-img-wrap {
             border-color: var(--gold);
-            box-shadow: 0 8px 30px rgba(176,141,25,0.15);
+            box-shadow: 0 8px 30px rgba(181,134,42,0.15);
             transform: scale(1.05);
         }
         .team-img-wrap img {
@@ -408,7 +416,7 @@
         }
         .team-card:hover .team-img-wrap img { transform: scale(1.08); }
         .team-card h4 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 17px; font-weight: 400; margin-bottom: 4px;
         }
         .team-card .team-role {
@@ -428,12 +436,12 @@
         .host-img {
             width: 320px;
             border-radius: 20px;
-            border: 2px solid rgba(176,141,25,0.12);
+            border: 2px solid rgba(181,134,42,0.12);
             box-shadow: var(--shadow-md);
             transition: all 0.5s var(--ease-out-expo);
         }
         .host-img:hover {
-            border-color: rgba(176,141,25,0.3);
+            border-color: rgba(181,134,42,0.3);
             box-shadow: var(--shadow-lg);
             transform: scale(1.02);
         }
@@ -456,7 +464,7 @@
             transform: translateX(-4px);
         }
         .host-stat-row .val {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 28px; font-weight: 400; color: var(--gold); line-height: 1;
         }
         .host-stat-row .lbl {
@@ -475,7 +483,7 @@
         .host-bio-card::before {
             content: '\201C';
             position: absolute; top: 16px; left: 24px;
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 60px; color: var(--gold); opacity: 0.12;
             line-height: 1;
         }
@@ -516,7 +524,7 @@
             box-shadow: var(--shadow-md);
         }
         .sdn-stat-card .val {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 46px; font-weight: 400; color: var(--gold); line-height: 1;
         }
         .sdn-stat-card .lbl {
@@ -555,7 +563,7 @@
             border-radius: 16px; padding: 36px;
         }
         .age-card h4 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 20px; font-weight: 400; margin-bottom: 28px;
         }
         .age-bar-group { display: flex; flex-direction: column; gap: 16px; }
@@ -597,7 +605,7 @@
             letter-spacing: -0.5px;
         }
         .platform-card h4 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 22px; font-weight: 400; margin-bottom: 4px;
         }
         .platform-card .platform-tag {
@@ -613,7 +621,7 @@
         .platform-stat:last-child { border: none; padding: 0; }
         .platform-stat .label { font-size: 13px; color: var(--text-muted); font-weight: 400; }
         .platform-stat .value {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 16px; font-weight: 400; color: var(--gold);
         }
 
@@ -625,7 +633,7 @@
         .podcast::before {
             content: '';
             position: absolute; inset: 0;
-            background: radial-gradient(ellipse at 20% 40%, rgba(176,141,25,0.03) 0%, transparent 55%);
+            background: radial-gradient(ellipse at 20% 40%, rgba(181,134,42,0.03) 0%, transparent 55%);
         }
         .podcast .container { position: relative; }
         .pillars-grid {
@@ -645,13 +653,13 @@
             transform: translateY(-3px);
         }
         .pillar-num {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 40px; font-weight: 400; color: var(--gold);
             line-height: 1; min-width: 52px; opacity: 0.25;
             font-style: italic;
         }
         .pillar-card h4 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 19px; font-weight: 400; margin-bottom: 8px;
         }
         .pillar-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
@@ -693,7 +701,7 @@
         .collab-intro::before {
             content: '';
             position: absolute; inset: 0;
-            background: radial-gradient(ellipse at 50% 50%, rgba(176,141,25,0.04) 0%, transparent 50%);
+            background: radial-gradient(ellipse at 50% 50%, rgba(181,134,42,0.04) 0%, transparent 50%);
         }
         .collab-intro .container { position: relative; }
         .collab-models {
@@ -715,13 +723,13 @@
             border-color: var(--border-hover);
         }
         .collab-model-num {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 56px; font-weight: 400; color: var(--gold);
             opacity: 0.15; line-height: 1; margin-bottom: 16px;
             font-style: italic;
         }
         .collab-model-card h4 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 22px; font-weight: 400; margin-bottom: 14px;
         }
         .collab-model-card p {
@@ -737,7 +745,7 @@
             margin-bottom: 8px;
         }
         .pricing-header h3 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 28px; font-weight: 400;
         }
         .pricing-header .tier-badge {
@@ -779,7 +787,7 @@
         }
         .pricing-table tbody tr:hover { background: var(--gold-warm); }
         .pricing-table td:nth-child(3) {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 16px;
             color: var(--gold); font-weight: 400;
         }
@@ -827,13 +835,13 @@
             transform: translateY(-4px);
         }
         .why-num {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 52px; font-weight: 400; color: var(--gold);
             opacity: 0.15; line-height: 1; margin-bottom: 14px;
             font-style: italic;
         }
         .why-card h4 {
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 21px; font-weight: 400; margin-bottom: 10px;
         }
         .why-card p { font-size: 14.5px; color: var(--text-muted); line-height: 1.7; }
@@ -849,7 +857,7 @@
         .cta-section::before {
             content: '';
             position: absolute; inset: 0;
-            background: radial-gradient(ellipse at 50% 40%, rgba(176,141,25,0.06) 0%, transparent 55%);
+            background: radial-gradient(ellipse at 50% 40%, rgba(181,134,42,0.06) 0%, transparent 55%);
         }
         .cta-section .container { position: relative; }
         .steps-row {
@@ -871,9 +879,9 @@
         .step-num {
             width: 44px; height: 44px; margin: 0 auto 18px;
             border-radius: 50%;
-            background: var(--gold-dim); border: 1.5px solid rgba(176,141,25,0.3);
+            background: var(--gold-dim); border: 1.5px solid rgba(181,134,42,0.3);
             display: flex; align-items: center; justify-content: center;
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Fraunces', serif;
             font-size: 20px; font-weight: 400; color: var(--gold);
         }
         .step-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
@@ -885,12 +893,12 @@
             transition: all 0.5s var(--ease-out-expo);
             border: none; cursor: pointer;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 20px rgba(176,141,25,0.25);
+            box-shadow: 0 4px 20px rgba(181,134,42,0.25);
         }
         .cta-btn:hover {
             background: var(--gold-light);
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(176,141,25,0.35);
+            box-shadow: 0 8px 30px rgba(181,134,42,0.35);
         }
         .cta-btn svg { width: 18px; height: 18px; }
 
@@ -946,7 +954,7 @@
 
         /* Smooth selection color */
         ::selection {
-            background: rgba(176,141,25,0.15);
+            background: rgba(181,134,42,0.15);
             color: var(--text-primary);
         }
 
@@ -954,10 +962,10 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: var(--bg-alt); }
         ::-webkit-scrollbar-thumb {
-            background: rgba(176,141,25,0.25);
+            background: rgba(181,134,42,0.25);
             border-radius: 3px;
         }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(176,141,25,0.4); }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(181,134,42,0.4); }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 1024px) {
@@ -990,9 +998,210 @@
             .slider-dot.active { width: 16px; }
             .section-label::before { display: none; }
         }
+
+        /* ════════ EL BORSA W EL FORSA — BRAND LAYER ════════ */
+        /* Hero becomes a dark-forest stage for the bilingual wordmark */
+        .hero {
+            background: radial-gradient(ellipse at 50% 28%, #3a4430 0%, #323a29 46%, #283021 100%);
+        }
+        .hero::before { opacity: 0.06; mix-blend-mode: overlay; }
+        .hero::after { border-color: rgba(216,176,97,0.12); }
+        .hero-badge {
+            background: rgba(216,176,97,0.10);
+            border-color: rgba(216,176,97,0.28);
+            color: var(--gold-bright);
+        }
+        .hero-badge::before { background: var(--gold-bright); }
+        .hero-sub { color: rgba(244,236,223,0.74); }
+        .hero-stat-val { color: var(--gold-bright); }
+        .hero-stat-label { color: rgba(244,236,223,0.5); }
+        .hero-sponsor-eyebrow {
+            font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+            font-size: clamp(26px, 4.2vw, 46px); color: rgba(244,236,223,0.9);
+            line-height: 1; margin-bottom: 2px;
+            opacity: 0; transform: translateY(20px);
+            animation: heroReveal 0.8s var(--ease-out-expo) 0.35s forwards;
+        }
+        .hero-ar-name {
+            font-family: 'Cairo', sans-serif; font-weight: 700; direction: rtl;
+            font-size: clamp(18px, 3.2vw, 26px); color: #9FB08D; margin-top: 22px;
+            opacity: 0; transform: translateY(16px);
+            animation: heroReveal 0.8s var(--ease-out-expo) 0.85s forwards;
+        }
+        /* Wordmark lockup: winged coin top-right · «و» centered · bulb bottom-center */
+        .bwf-mark {
+            position: relative; display: inline-block; padding: 46px 16px 40px; margin: 8px 0 4px;
+            opacity: 0; transform: translateY(28px);
+            animation: heroReveal 1s var(--ease-out-expo) 0.5s forwards;
+        }
+        .bwf-bull { position: absolute; top: -30px; right: -22px; width: 100px; height: auto; }
+        .bwf-bulb { position: absolute; bottom: -24px; left: 50%; transform: translateX(-50%); width: 58px; height: auto; }
+        .bwf-wordmark { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+        .bwf-line { display: flex; align-items: center; gap: 0.32em; }
+        .bwf-latin {
+            font-family: 'Archivo', sans-serif; font-weight: 800; letter-spacing: 0.01em;
+            line-height: 0.86; color: #F6EEDD; font-size: clamp(46px, 8.5vw, 90px);
+        }
+        .bwf-ar {
+            font-family: 'Cairo', sans-serif; font-weight: 800; line-height: 0.7;
+            color: #F6EEDD; font-size: clamp(34px, 6.2vw, 66px);
+        }
+        .bwf-wa {
+            font-family: 'Cairo', sans-serif; font-weight: 700; line-height: 0.7; align-self: center;
+            margin: -0.02em 0; color: var(--gold-bright); font-size: clamp(23px, 4.2vw, 44px);
+        }
+        /* Section kickers adopt the brand rust accent */
+        .section-label, .mission-col h4 { color: var(--rust); }
+        .section-label::before, .mission-col h4::before { background: var(--rust); }
+        /* Primary CTA becomes brand forest */
+        .cta-btn { background: var(--forest); color: #F4ECDF; box-shadow: 0 4px 20px rgba(43,58,46,0.25); }
+        .cta-btn:hover { background: #3d4732; box-shadow: 0 8px 30px rgba(43,58,46,0.32); }
+
+        /* Partner & footer logos shown plain (no plate) — Acumen in gold,
+           SDN recolored to forest so both read on the light cards */
+        .partner-logo {
+            position: absolute; top: 34px; right: 40px;
+            height: 104px; width: auto; margin: 0;
+            background: none; padding: 0; border-radius: 0;
+            object-fit: contain; opacity: 1; box-shadow: none;
+            z-index: 2;
+        }
+        /* reserve header space so the heading clears the corner logo */
+        .partner-card { padding-top: 56px; }
+        .partner-card h3 { padding-right: 120px; }
+        .footer-logos { gap: 24px; }
+        .footer-logos img {
+            height: 44px; width: auto; padding: 0;
+            background: none; border-radius: 0; opacity: 0.85; filter: none;
+        }
+
+        /* ───────── BRAND INHERITANCE + REDESIGN PASS ───────── */
+        /* atmosphere: warm grain + reusable dotted-grid motif from the guideline */
+        body::after { opacity: 0.035; }
+        .dotgrid-bg {
+            background-image: radial-gradient(currentColor 1.1px, transparent 1.2px);
+            background-size: 18px 18px;
+        }
+        ::selection { background: var(--gold); color: var(--forest-deep); }
+
+        /* Kicker — exactly the guideline's rust eyebrow with a 34px rule */
+        .section-label, .mission-col h4 {
+            color: var(--rust); font-weight: 600; letter-spacing: 0.3em; gap: 14px;
+        }
+        .section-label::before, .mission-col h4::before {
+            width: 34px; height: 1.5px; background: var(--rust); opacity: 1;
+        }
+        /* Display emphasis → rust italic (guideline .h2 em) */
+        .section-title .gold { color: var(--rust); font-style: italic; }
+        /* small accent text → rust for legibility + brand consistency */
+        .partner-card .role, .platform-card .platform-tag { color: var(--rust); }
+        .geo-label span[style], .age-row span:last-child { color: var(--rust) !important; }
+
+        /* Unify card radius to the brand's 20px */
+        .partner-card, .metric-card, .sdn-stat-card, .platform-card,
+        .pillar-card, .collab-model-card, .why-card, .step-card, .age-card { border-radius: 20px; }
+
+        /* Tabs + pills → brand */
+        .pricing-tab.active { background: var(--forest); border-color: var(--forest); color: var(--paper-hi); }
+        .tier-badge { background: var(--gold-dim); color: var(--rust); }
+
+        /* ===== Section rhythm: punctuate with forest like the guideline ===== */
+        /* SDN Numbers → forest feature section */
+        .sdn-numbers { background: var(--forest); color: var(--paper); position: relative; overflow: hidden; }
+        .sdn-numbers::after {
+            content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.5;
+            background-image: radial-gradient(rgba(216,176,97,0.16) 1.1px, transparent 1.2px);
+            background-size: 18px 18px;
+        }
+        .sdn-numbers .container { position: relative; z-index: 1; }
+        .sdn-numbers .section-label { color: var(--gold); }
+        .sdn-numbers .section-label::before { background: var(--gold); }
+        .sdn-numbers .section-title { color: var(--paper-hi); }
+        .sdn-numbers .section-desc { color: rgba(244,236,223,0.74); }
+        .sdn-numbers .divider { background: var(--gold); opacity: 0.6; }
+        .sdn-numbers .sdn-stat-card {
+            background: rgba(255,255,255,0.045); border-color: rgba(244,236,223,0.12); box-shadow: none;
+        }
+        .sdn-numbers .sdn-stat-card:hover { border-color: rgba(216,176,97,0.4); box-shadow: 0 24px 48px -30px rgba(0,0,0,0.6); }
+        .sdn-numbers .sdn-stat-card .val { color: var(--gold); }
+        .sdn-numbers .sdn-stat-card .lbl { color: rgba(244,236,223,0.6); }
+
+        /* CTA → deep forest-night close */
+        .cta-section { background: var(--forest-night); color: var(--paper); }
+        .cta-section .section-label { color: var(--gold); }
+        .cta-section .section-label::before { background: var(--gold); }
+        .cta-section .section-title { color: var(--paper-hi); }
+        .cta-section .divider { background: var(--gold); opacity: 0.6; }
+        .cta-section .step-card {
+            background: rgba(255,255,255,0.04); border-color: rgba(244,236,223,0.12); box-shadow: none;
+        }
+        .cta-section .step-card p { color: rgba(244,236,223,0.82); }
+        .cta-section .step-num {
+            background: rgba(216,176,97,0.14); border-color: rgba(216,176,97,0.4); color: var(--gold);
+        }
+        /* CTA button → brand gold lozenge with forest ink */
+        .cta-btn { background: var(--gold); color: var(--forest-deep); box-shadow: 0 10px 34px -10px rgba(0,0,0,0.45); }
+        .cta-btn:hover { background: #e6c277; transform: translateY(-3px); box-shadow: 0 16px 40px -12px rgba(0,0,0,0.5); }
+
+        /* legibility: small tabular figures + table heads get a deeper gold / rust
+           (large display numbers stay the bright brand gold) */
+        .pricing-table td:nth-child(3), .platform-stat .value { color: #a9802a; }
+        .pricing-table th { color: var(--rust); }
+
+        @media (max-width: 768px) {
+            .bwf-bull { width: 72px; top: -22px; right: -10px; }
+            .bwf-bulb { width: 44px; bottom: -18px; }
+            .section-label::before { display: none; }
+            .mission-col h4::before { display: none; }
+        }
     </style>
 </head>
 <body>
+
+<!-- EL BORSA W EL FORSA — LOGO ICON DEFS (winged coin + lightbulb) -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <linearGradient id="g-gold2" x1="0.2" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#ffd766"/><stop offset="0.5" stop-color="#f9b62a"/><stop offset="1" stop-color="#ef9d15"/>
+    </linearGradient>
+    <linearGradient id="g-wing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f6f8"/><stop offset="1" stop-color="#ccd3d9"/>
+    </linearGradient>
+    <radialGradient id="g-bulbY" cx="0.4" cy="0.32" r="0.9">
+      <stop offset="0" stop-color="#ffd24f"/><stop offset="0.55" stop-color="#f9b71d"/><stop offset="1" stop-color="#f1a70e"/>
+    </radialGradient>
+    <clipPath id="bw-coinclip"><circle cx="60" cy="50" r="22"/></clipPath>
+    <g id="bw-wing">
+      <path d="M74 40 C84 30 100 23 113 24 C109 28 106 30 102 31 C105 33 103 37 98 38 C101 40 99 44 93 45 C96 47 93 51 87 51 C90 54 85 56 80 55 C77 53 74 47 74 40 Z" fill="url(#g-wing)" stroke="#8b949b" stroke-width="1.3" stroke-linejoin="round"/>
+      <path d="M80 43 C90 37 102 31 110 28" fill="none" stroke="#aab2b8" stroke-width="1" stroke-linecap="round"/>
+      <path d="M82 47 C91 42 100 38 106 35" fill="none" stroke="#aab2b8" stroke-width="1" stroke-linecap="round"/>
+    </g>
+    <symbol id="ic-cash" viewBox="0 0 120 90">
+      <use href="#bw-wing" transform="translate(120,0) scale(-1,1)"/>
+      <use href="#bw-wing"/>
+      <circle cx="60" cy="52" r="22" fill="#d2920f"/>
+      <circle cx="60" cy="50" r="22" fill="url(#g-gold2)"/>
+      <path d="M42 64 A 22 22 0 0 0 78 64" fill="none" stroke="#c9890d" stroke-width="2.6" stroke-dasharray="1.2 2.3"/>
+      <circle cx="60" cy="50" r="17.5" fill="none" stroke="#eaa824" stroke-width="1.4"/>
+      <g clip-path="url(#bw-coinclip)"><polygon points="44,30 55,28 78,72 67,74" fill="#ffffff" opacity="0.16"/></g>
+      <path d="M60 38 V62 M66 43 C66 40 63 39 60 39 C57 39 54 40 54 43.5 C54 49 66 47.5 66 53 C66 56.5 63 57.5 60 57.5 C57 57.5 54 56.5 54 53.5" fill="none" stroke="#fff4d6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <ellipse cx="52" cy="42" rx="3.8" ry="2.4" fill="#ffffff" opacity="0.45"/>
+      <g stroke="#9aa4ad" stroke-width="1.6" stroke-linecap="round" fill="none">
+        <path d="M107 12 C111 11 114 13 115 16"/><path d="M111 8 C114 8 116 10 117 13"/>
+      </g>
+    </symbol>
+    <symbol id="ic-bulb" viewBox="0 0 80 100">
+      <ellipse cx="40" cy="96" rx="17" ry="3" fill="#c7ccd0" opacity="0.5"/>
+      <path d="M28 70 L52 70 L50 86 C50 89 46 91 40 91 C34 91 30 89 30 86 Z" fill="#5b6064"/>
+      <g stroke="#42464a" stroke-width="1.3" fill="none"><path d="M28.6 75 H51.4"/><path d="M29.4 80 H50.6"/><path d="M30.4 85 H49.6"/></g>
+      <g stroke="#8e9499" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M31 73 H40"/><path d="M31.6 78 H39"/><path d="M32.6 83 H38.5"/><path d="M35 88.5 H41"/></g>
+      <path d="M40 10 C24 10 13 22 13 38 C13 50 21 58 25 64 C26.5 66 27 68 27 70 L53 70 C53 68 53.5 66 55 64 C59 58 67 50 67 38 C67 22 56 10 40 10 Z" fill="url(#g-bulbY)"/>
+      <path d="M55 15 C63 22 67 30 67 39 C67 50 60 58 55 64 C53.5 66 53 68 53 70 L49.5 70 C56 62 61.5 52 61.5 40 C61.5 30 59.5 22 53 17 Z" fill="#e89c0a" opacity="0.5"/>
+      <path d="M27 22 C31 20 35 23 33 27 C31.5 30 28 33 24.5 35 C22 31 23 24 27 22 Z" fill="#ffffff" opacity="0.9"/>
+      <path d="M23.5 35 C25.3 35 26 37 25.4 39.5 L23.6 49 C23 51.4 20.6 51.4 20 49 L21.4 39.5 C21.8 36.8 21.7 35 23.5 35 Z" fill="#ffffff" opacity="0.82"/>
+    </symbol>
+  </defs>
+</svg>
 
 <!-- SLIDER NAV -->
 <nav class="slider-nav" id="sliderNav">
@@ -1016,7 +1225,17 @@
 <section class="hero" id="hero">
     <div class="hero-content">
         <div class="hero-badge">Partnership Proposal</div>
-        <h1>Sponsor<br><span class="gold"><i>Estathmer Sah</i></span></h1>
+        <div class="hero-sponsor-eyebrow">Sponsor</div>
+        <div class="bwf-mark">
+            <svg class="bwf-bull" viewBox="0 0 120 90"><use href="#ic-cash"/></svg>
+            <div class="bwf-wordmark">
+                <div class="bwf-line"><span class="bwf-latin">BORSA</span><span class="bwf-ar">اﻟ</span></div>
+                <div class="bwf-wa">و</div>
+                <div class="bwf-line"><span class="bwf-latin">FORSA</span><span class="bwf-ar">اﻟ</span></div>
+            </div>
+            <svg class="bwf-bulb" viewBox="0 0 80 100"><use href="#ic-bulb"/></svg>
+        </div>
+        <div class="hero-ar-name">البورصة و الفرصة</div>
         <p class="hero-sub">Reach Egypt's growing retail investor audience through the most credible finance podcast in the region. A collaboration between Acumen Holding and SDN Media.</p>
         <div class="hero-stats">
             <div>
@@ -1057,7 +1276,7 @@
                 </ul>
             </div>
             <div class="partner-card">
-                <img src="images/image11.png" alt="SDN Media" class="partner-logo">
+                <img src="images/image11-dark.png" alt="SDN Media" class="partner-logo">
                 <h3>SDN Media</h3>
                 <div class="role">Brings the reach.</div>
                 <ul>
@@ -1274,7 +1493,7 @@
                         <span>39.7%</span>
                     </div>
                 </div>
-                <p style="margin-top:24px; font-size:14px; color:var(--gray-400); line-height:1.6;">
+                <p style="margin-top:24px; font-size:14px; color:var(--text-muted); line-height:1.6;">
                     Skews male &mdash; up to 84% on video-led platforms, while female audience reaches 53&ndash;55% on others.
                 </p>
             </div>
@@ -1665,11 +1884,6 @@
                 <p>Sign & go live.</p>
             </div>
         </div>
-
-        <a href="#pricing" class="cta-btn">
-            View Pricing
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
-        </a>
     </div>
 </section>
 
@@ -1678,9 +1892,9 @@
     <div class="footer-logos">
         <img src="images/image1.png" alt="Acumen Holding">
         <span>&times;</span>
-        <img src="images/image11.png" alt="SDN Media">
+        <img src="images/image11-dark.png" alt="SDN Media">
     </div>
-    <p>ACUMEN HOLDING &times; SDN MEDIA &mdash; CONFIDENTIAL 2025</p>
+    <p>EL BORSA W EL FORSA &mdash; البورصة و الفرصة &nbsp;&bull;&nbsp; ACUMEN HOLDING &times; SDN MEDIA &mdash; CONFIDENTIAL 2025</p>
 </footer>
 
 <script>

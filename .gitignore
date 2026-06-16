@@ -1,0 +1,10 @@
+# agent/editor local config
+.claude/
+
+# temp verification/render artifacts
+_*.html
+_*.png
+
+# OS
+.DS_Store
+Thumbs.db
