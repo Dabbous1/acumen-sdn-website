@@ -1034,9 +1034,9 @@
             opacity: 0; transform: translateY(28px);
             animation: heroReveal 1s var(--ease-out-expo) 0.5s forwards;
         }
-        .bwf-bull { position: absolute; top: -30px; right: -22px; width: 100px; height: auto; }
-        .bwf-bulb { position: absolute; bottom: -24px; left: 50%; transform: translateX(-50%); width: 58px; height: auto; }
-        .bwf-wordmark { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+        .bwf-bull { position: absolute; top: -30px; right: -30px; width: 104px; height: auto; z-index: 2; }
+        .bwf-bulb { position: absolute; bottom: -56px; left: -54px; width: 104px; height: auto; z-index: 2; }
+        .bwf-wordmark { display: block; width: clamp(280px, 56vw, 540px); height: auto; }
         .bwf-line { display: flex; align-items: center; gap: 0.32em; }
         .bwf-latin {
             font-family: 'Archivo', sans-serif; font-weight: 800; letter-spacing: 0.01em;
@@ -1069,9 +1069,9 @@
         /* reserve header space so the heading clears the corner logo */
         .partner-card { padding-top: 56px; }
         .partner-card h3 { padding-right: 120px; }
-        .footer-logos { gap: 24px; }
+        .footer-logos { gap: 36px; }
         .footer-logos img {
-            height: 44px; width: auto; padding: 0;
+            height: 88px; width: auto; padding: 0;
             background: none; border-radius: 0; opacity: 0.85; filter: none;
         }
 
@@ -1150,7 +1150,7 @@
 
         @media (max-width: 768px) {
             .bwf-bull { width: 72px; top: -22px; right: -10px; }
-            .bwf-bulb { width: 44px; bottom: -18px; }
+            .bwf-bulb { width: 72px; bottom: -34px; left: -28px; }
             .section-label::before { display: none; }
             .mission-col h4::before { display: none; }
         }
@@ -1227,13 +1227,9 @@
         <div class="hero-badge">Partnership Proposal</div>
         <div class="hero-sponsor-eyebrow">Sponsor</div>
         <div class="bwf-mark">
-            <svg class="bwf-bull" viewBox="0 0 120 90"><use href="#ic-cash"/></svg>
-            <div class="bwf-wordmark">
-                <div class="bwf-line"><span class="bwf-latin">BORSA</span><span class="bwf-ar">اﻟ</span></div>
-                <div class="bwf-wa">و</div>
-                <div class="bwf-line"><span class="bwf-latin">FORSA</span><span class="bwf-ar">اﻟ</span></div>
-            </div>
-            <svg class="bwf-bulb" viewBox="0 0 80 100"><use href="#ic-bulb"/></svg>
+            <img class="bwf-bull" src="images/icon-cash.png" alt="">
+            <img class="bwf-wordmark" src="images/wordmark-en.png" alt="El Borsa w El Forsa">
+            <img class="bwf-bulb" src="images/icon-key.png" alt="">
         </div>
         <div class="hero-ar-name">البورصة و الفرصة</div>
         <p class="hero-sub">Reach Egypt's growing retail investor audience through the most credible finance podcast in the region. A collaboration between Acumen Holding and SDN Media.</p>
@@ -1396,7 +1392,7 @@
                         <div class="lbl">Instagram Followers</div>
                     </div>
                     <div class="host-stat-row">
-                        <div class="val">4M+</div>
+                        <div class="val">4000k</div>
                         <div class="lbl">TikTok Followers</div>
                     </div>
                     <div class="host-stat-row">
